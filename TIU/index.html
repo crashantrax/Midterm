@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Midterm_Tiu_3r3</title>
+</head>
+<body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		$.getJSON("https://jsonplaceholder.typicode.com/todos/",function(data){
+			data.forEach(function(data){
+				if(data.completed){
+					$('body').append("<center><div>"+"<b>Title:</b> "+data.title+"<b>| completed <b></div>");
+				}
+				else
+				{
+					$('body').append("<center><div>"+"<b>Title:</b> "+data.title+"<b>| incomplete </b></div>");
+				}
+			})
+		})
+	});
+
+</script>
+
+<div id="div1"></div>
+
+</body>
+</html>
